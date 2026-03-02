@@ -21,18 +21,28 @@ struct Mod {
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct WorldSettings {
-    #[serde(rename = "zombieCount")]
-    zombie_count: u32,
-    #[serde(rename = "lootRarity")]
-    loot_rarity: u32,
-    #[serde(rename = "dayLength")]
-    day_length: u32,
-    #[serde(rename = "waterShutoff")]
-    water_shutoff: u32,
-    #[serde(rename = "elecShutoff")]
-    elec_shutoff: u32,
-    #[serde(rename = "xpMultiplier")]
-    xp_multiplier: f32,
+    #[serde(rename = "dayLength")] day_length: u32,
+    #[serde(rename = "waterShutoff")] water_shutoff: u32,
+    #[serde(rename = "elecShutoff")] elec_shutoff: u32,
+    temperature: u32,
+    rain: u32,
+    #[serde(rename = "lootFood")] loot_food: u32,
+    #[serde(rename = "lootWeapon")] loot_weapon: u32,
+    #[serde(rename = "lootMedical")] loot_medical: u32,
+    #[serde(rename = "lootSurvival")] loot_survival: u32,
+    #[serde(rename = "lootMechanics")] loot_mechanics: u32,
+    #[serde(rename = "lootLiterature")] loot_literature: u32,
+    #[serde(rename = "lootOther")] loot_other: u32,
+    #[serde(rename = "zombieCount")] zombie_count: u32,
+    #[serde(rename = "zombieSpeed")] zombie_speed: u32,
+    #[serde(rename = "zombieStrength")] zombie_strength: u32,
+    #[serde(rename = "zombieToughness")] zombie_toughness: u32,
+    #[serde(rename = "zombieTransmission")] zombie_transmission: u32,
+    #[serde(rename = "zombieCognition")] zombie_cognition: u32,
+    #[serde(rename = "xpMultiplier")] xp_multiplier: f32,
+    #[serde(rename = "statsDecrease")] stats_decrease: u32,
+    #[serde(rename = "injurySeverity")] injury_severity: u32,
+    #[serde(rename = "characterFreePoints")] character_free_points: i32,
     pvp: bool,
 }
 
@@ -63,12 +73,28 @@ impl Default for ServerConfig {
                 Mod { workshop_id: "2392709985".to_string(), mod_id: "tsarslib".to_string() },
             ],
             world: WorldSettings {
-                zombie_count: 4,
-                loot_rarity: 3,
                 day_length: 2,
                 water_shutoff: 2,
                 elec_shutoff: 2,
+                temperature: 3,
+                rain: 3,
+                loot_food: 3,
+                loot_weapon: 3,
+                loot_medical: 3,
+                loot_survival: 3,
+                loot_mechanics: 3,
+                loot_literature: 3,
+                loot_other: 3,
+                zombie_count: 4,
+                zombie_speed: 2,
+                zombie_strength: 2,
+                zombie_toughness: 2,
+                zombie_transmission: 1,
+                zombie_cognition: 3,
                 xp_multiplier: 1.0,
+                stats_decrease: 3,
+                injury_severity: 2,
+                character_free_points: 0,
                 pvp: false,
             },
             status: "stopped".to_string(),

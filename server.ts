@@ -26,12 +26,28 @@ const defaultConfig = {
     { workshopId: '2392709985', modId: 'tsarslib' }
   ],
   world: {
-    zombieCount: 4, // 1=Insane, 2=Very High, 3=High, 4=Normal, 5=Low
-    lootRarity: 3, // 1=Extremely Rare, 2=Rare, 3=Normal, 4=Common
-    dayLength: 2, // hours
-    waterShutoff: 2, // 1=0-30 days, 2=0-2 months, etc.
+    dayLength: 2,
+    waterShutoff: 2,
     elecShutoff: 2,
+    temperature: 3,
+    rain: 3,
+    lootFood: 3,
+    lootWeapon: 3,
+    lootMedical: 3,
+    lootSurvival: 3,
+    lootMechanics: 3,
+    lootLiterature: 3,
+    lootOther: 3,
+    zombieCount: 4,
+    zombieSpeed: 2,
+    zombieStrength: 2,
+    zombieToughness: 2,
+    zombieTransmission: 1,
+    zombieCognition: 3,
     xpMultiplier: 1.0,
+    statsDecrease: 3,
+    injurySeverity: 2,
+    characterFreePoints: 0,
     pvp: false
   },
   status: 'stopped' // mock status
