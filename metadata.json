@@ -1,0 +1,5 @@
+{
+  "name": "PZ Server Panel",
+  "description": "Painel de controle e servidor dedicado para Project Zomboid com Docker.",
+  "requestFramePermissions": []
+}

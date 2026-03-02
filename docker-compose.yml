@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  pz-server-panel:
+    build: .
+    container_name: pz-server-panel
+    restart: unless-stopped
+    ports:
+      - "16261:16261/udp"
+      - "16262:16262/udp"
+      - "3000:3000/tcp"
+    volumes:
+      - ./pz-data:/home/steam/Zomboid
+      - ./pz-server:/opt/pzserver
+    environment:
+      - TZ=America/Sao_Paulo
