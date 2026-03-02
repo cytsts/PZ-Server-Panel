@@ -25,6 +25,15 @@ const defaultConfig = {
     { workshopId: '2616986064', modId: 'TsarLib' },
     { workshopId: '2392709985', modId: 'tsarslib' }
   ],
+  world: {
+    zombieCount: 4, // 1=Insane, 2=Very High, 3=High, 4=Normal, 5=Low
+    lootRarity: 3, // 1=Extremely Rare, 2=Rare, 3=Normal, 4=Common
+    dayLength: 2, // hours
+    waterShutoff: 2, // 1=0-30 days, 2=0-2 months, etc.
+    elecShutoff: 2,
+    xpMultiplier: 1.0,
+    pvp: false
+  },
   status: 'stopped' // mock status
 };
 

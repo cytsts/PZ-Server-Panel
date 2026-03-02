@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Dashboard } from './components/Dashboard';
 import { Settings } from './components/Settings';
+import { WorldSettings } from './components/WorldSettings';
 import { Mods } from './components/Mods';
 import { Deploy } from './components/Deploy';
 import { Loader2 } from 'lucide-react';
@@ -84,6 +85,7 @@ export default function App() {
       <main className="flex-1 overflow-y-auto">
         {currentTab === 'dashboard' && <Dashboard config={config} />}
         {currentTab === 'settings' && <Settings config={config} onSave={handleSaveConfig} />}
+        {currentTab === 'world' && <WorldSettings config={config} onSave={handleSaveConfig} />}
         {currentTab === 'mods' && <Mods config={config} onSave={handleSaveConfig} />}
         {currentTab === 'deploy' && <Deploy />}
       </main>

@@ -20,6 +20,23 @@ struct Mod {
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
+struct WorldSettings {
+    #[serde(rename = "zombieCount")]
+    zombie_count: u32,
+    #[serde(rename = "lootRarity")]
+    loot_rarity: u32,
+    #[serde(rename = "dayLength")]
+    day_length: u32,
+    #[serde(rename = "waterShutoff")]
+    water_shutoff: u32,
+    #[serde(rename = "elecShutoff")]
+    elec_shutoff: u32,
+    #[serde(rename = "xpMultiplier")]
+    xp_multiplier: f32,
+    pvp: bool,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
 struct ServerConfig {
     #[serde(rename = "serverName")]
     server_name: String,
@@ -29,6 +46,7 @@ struct ServerConfig {
     port: u16,
     version: String,
     mods: Vec<Mod>,
+    world: WorldSettings,
     status: String,
 }
 
@@ -44,6 +62,15 @@ impl Default for ServerConfig {
                 Mod { workshop_id: "2616986064".to_string(), mod_id: "TsarLib".to_string() },
                 Mod { workshop_id: "2392709985".to_string(), mod_id: "tsarslib".to_string() },
             ],
+            world: WorldSettings {
+                zombie_count: 4,
+                loot_rarity: 3,
+                day_length: 2,
+                water_shutoff: 2,
+                elec_shutoff: 2,
+                xp_multiplier: 1.0,
+                pvp: false,
+            },
             status: "stopped".to_string(),
         }
     }

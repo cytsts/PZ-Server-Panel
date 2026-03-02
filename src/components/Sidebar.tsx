@@ -1,5 +1,5 @@
 import React from 'react';
-import { LayoutDashboard, Settings, Package, TerminalSquare, Play, Square } from 'lucide-react';
+import { LayoutDashboard, Settings, Package, TerminalSquare, Play, Square, Globe } from 'lucide-react';
 import { clsx } from 'clsx';
 
 interface SidebarProps {
@@ -13,7 +13,8 @@ interface SidebarProps {
 export function Sidebar({ currentTab, setCurrentTab, serverStatus, onStart, onStop }: SidebarProps) {
   const tabs = [
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'settings', label: 'Configurações', icon: Settings },
+    { id: 'settings', label: 'Servidor', icon: Settings },
+    { id: 'world', label: 'Mundo', icon: Globe },
     { id: 'mods', label: 'Mods', icon: Package },
     { id: 'deploy', label: 'Deploy', icon: TerminalSquare },
   ];
